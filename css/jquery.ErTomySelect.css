@@ -1,0 +1,61 @@
+#ErTomyModal {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border:solid 1px black;
+    padding:5px;
+    width:500px;
+    height:500px;    
+    background-color: #fff;
+    z-index: 99999999;
+}
+
+#ErTomyGalery {
+    overflow:auto;
+    height:450px;    
+}
+
+
+#ErTomyGalery .column {
+    float: left;
+    padding: 10px;
+}
+
+#ErTomyGalery .column img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+#ErTomyGalery .column img.selected{
+    border:solid 1px red;
+}
+
+#ErTomyGalery .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#ErTomyModal button{
+    
+    float:right;
+    margin: 8px;
+    margin-top:15px;
+}
+#ErTomyModal button.upload{
+    float:left;    
+}
+
+#ErTomyOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: black;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}

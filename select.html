@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo de selección</title>
+    <script src="js/jquery-3.4.0.min.js"></script>    
+    <script src="js/jquery.ErTomySelect.js"></script>
+    <link rel="stylesheet" href="css/jquery.ErTomySelect.css">
+    <script>
+        $(function() {
+            $('#select-button').ErTomySelect({
+                json: '/getImages-example.php',
+                folder:'aaa',
+                recursive:true,
+                columns:3,
+                uploader:'/upload-example.php',
+                callback:function(path){                   
+                    alert(path);                                     
+                }
+            });
+        });    
+    </script>
+
+ 
+
+</head>
+<body>
+    
+
+
+    <button id="select-button">Seleccionar imagen</button>
+
+
+
+</body>
+</html>
